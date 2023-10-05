@@ -1,4 +1,4 @@
-# ProcPIDStat_profiling
+# BashProfiling
 
 > I know it is a horrible name but it is working for me.
 
