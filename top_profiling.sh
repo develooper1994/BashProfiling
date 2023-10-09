@@ -24,11 +24,11 @@ while true ; do
         exit 1
     fi
 
-    echo "$(date) // top command column($COLON) usage: $USAGE" | tee -a $LOG_FILE 
+    echo "$(date) // top command column($COLON) usage: $USAGE" 2>&1 | tee -a $LOG_FILE 
 
     if (( $(echo "$USAGE > $MAX" |bc -l) )); then
         MAX="$USAGE"
-        echo "$(date) // top command column($COLON) Max usage: $MAX" | tee -a $LOG_FILE
+        echo "$(date) // top command column($COLON) Max usage: $MAX" 2>&1 | tee -a $LOG_FILE
     fi
 
     sleep 1
